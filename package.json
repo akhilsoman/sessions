@@ -1,0 +1,19 @@
+{
+  "name": "demo-app",
+  "version": "00.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "start": "node server/app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-http-proxy": "^0.10.0",
+    "json-server": "^0.8.10",
+    "lodash": "^4.11.2",
+     "url": "^0.11.0"
+  }
+}
