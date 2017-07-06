@@ -71,14 +71,16 @@ var notesModule = (function () {
   }
 
   var publicAPI = {
-    init: function () {
+    init: function (opts) {
+
+    	$notes = $(opts.elm);
 	    // build the initial list from the existing `notes` data
 	    var html = ''
 	    var i
 	    for (i = 0; i < notes.length; i++) {
 		    html += '<a href=\'#\' class=\'note\'>' + notes[i] + '</a>'
 	    }
-	    $('#notes').html(html)
+	    $notes.html(html)
 
 	    // listen to 'help' button
 	    $('#open_help').bind('click',handleOpenHelp)
@@ -87,18 +89,22 @@ var notesModule = (function () {
 	    $('#add_note').bind('click',handleAddNote)
 
 	    // listen for <enter> in text box
-	    $('#note').bind('keypress',handleEnter)
+	    $notes.bind('keypress',handleEnter)
 
 	    // listen for clicks outside the notes box
 	    $(document).bind('click',handleDocumentClick)
 
 	    // listen for clicks on note elements
-	    $('#notes').on('click','.note',handleNoteClick)
+	    $notes.on('click','.note',handleNoteClick)
     },
     addInNotes: function (data) {
       notes = data
     }
   }
+  var notes = [];
+  var $notes;
+
+
   return publicAPI
 })()
 
@@ -111,4 +117,6 @@ notesModule.addInNotes(
 	  'The quick brown fox jumped over the moon.'
   ]
 )
-$(document).ready(notesModule.init())
+$(document).ready(notesModule.init({
+	elm: "#notes"
+}))

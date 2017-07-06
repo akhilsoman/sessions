@@ -1,0 +1,180 @@
+/* Reset
+------------------------------------------------------------ */
+@font-face {
+  font-family: "ge-inspira";
+  src: url("fonts/GEInspRg.eot") format("eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/GEInspRg.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */ url("fonts/GEInspRg.woff") format("woff"), /* Modern Browsers */ url("fonts/GEInspRg.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    background: #ffffff;
+    font-size: 13px;
+    color: #666666;
+    font-family: "ge-inspira";
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+}
+svg{
+    vertical-align: middle;
+}
+
+ul li {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-bottom: 10px;
+    color: #111111;
+}
+
+a,
+img {
+    outline: none;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0 0 10px;
+    line-height: 1.4em;
+    font-size: 1.2em;
+}
+
+img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+aside {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+
+/* Structure */
+
+#wrapper {
+    width: 920px;
+    max-width: 920px;
+    margin: auto;
+    padding: 2%;
+}
+
+#main {
+    width: 500px;
+    margin-right: 5%;
+    float: left;
+}
+
+aside {
+    width: 300px;
+    float: right;
+}
+/*Helper*/
+
+.fleft{
+    float: left;
+}
+/* Logo H1 */
+
+.ge-logo{
+    float: left;
+}
+
+
+/* Nav */
+
+header nav {
+    float: right;
+    margin-top: 40px;
+}
+
+header nav li {
+    display: inline;
+    margin-left: 15px;
+}
+
+#skipTo {
+    display: none;
+}
+
+#skipTo li {
+    background: #b1fffc;
+}
+
+
+/* Banner */
+
+#banner {
+    float: left;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 480px) {
+	/*Styles to make the menu responsive*/
+    /*#skipTo {
+        display: block;
+    }
+    header nav,
+    #main,
+    aside {
+        float: left;
+        clear: left;
+        margin: 0 0 10px;
+        width: 100%;
+    }
+    #skipTo{
+        margin-bottom: 0 !important;
+    }
+    .ge-logo{
+        margin: 10px 0;
+    }
+    header nav li {
+        margin: 0;
+        background: #efefef;
+        display: block;
+        margin-bottom: 3px;
+    }
+    header nav a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }*/
+}
